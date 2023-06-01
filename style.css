@@ -1,0 +1,195 @@
+* {
+    font-size: larger;
+    color: #0A3871;
+}
+
+/*********************** HEADER ***********************/
+.caja_header {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.titulo {
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: large;
+    color: blue;
+}
+
+.subtitulo{
+    margin-left: 2sem;
+    font-weight: bold;
+    font-size: large;
+    color: blue;
+}
+
+/*********************** MAIN ***********************/
+
+main {
+    height: 50%;
+}
+
+.caja_main {
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+
+.style_IniciarJuego {
+    background: #0A3871;
+    color: #E5E5E5;
+    border-radius: 25px;
+    height: 4em;
+    width: 12em;
+    cursor: pointer;
+
+}
+
+.style_AgregarPalabra {
+    background: #E5E5E5;
+    border-radius: 25px;
+    height: 4em;
+    width: 12em;
+    cursor: pointer;
+}
+
+.style_btn_desistir {
+    margin-left: 1rem;
+}
+
+.caja_juego {
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+
+.otro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/***********************    FOOTER ***********************/
+footer {
+    text-align: center;
+    padding: 40px;
+    /*
+    bottom: 0;
+    position: absolute;*/
+}
+
+.caja_footer {
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+
+.img_desarrollador {
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 25%;
+    max-width: 25%;
+    text-align: center;
+}
+
+.contacto_desarrollador {
+    color: #0A3871;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+  .btn-material {
+      padding: 0 16px;
+      border-radius: 2px;
+      background-color: #018786;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+          0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+      transition: background-color 15ms linear,
+          box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      height: 36px;
+      line-height: 2.25rem;
+      font-family: Roboto, sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+  }
+
+  .btn-material:hover,
+  .btn-material:focus {
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+          0 4px 5px 0 rgba(0, 0, 0, 0.14),
+          0 1px 10px 0 rgba(0, 0, 0, 0.12);
+      background-color: #159090;
+  }
+
+  .btn-material:active {
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+          0 8px 10px 1px rgba(0, 0, 0, 0.14),
+          0 3px 14px 2px rgba(0, 0, 0, 0.12);
+      background-color: #61b4b3;
+  }
+
+  .btn-bootstrap {
+      padding: .375rem .75rem;
+      border-radius: .25rem;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color .15s ease-in-out;
+  }
+
+  .btn-bootstrap:hover,
+  .btn-bootstrap:focus {
+      background-color: #0069d9;
+  }
+
+  .btn-bootstrap:active {
+      background-color: #0062cc;
+  }
+
+/*********************** vista celular ***********************/
+@media screen and (max-width:480px) {
+    /* disable webkit text size adjust (for iPhone) */
+    
+    h1 {
+        text-align: center;
+    }
+
+    .img_desarrollador {
+        width: 10%;
+        max-width: 10%;
+        height: auto;
+    }
+
+    .caja_header,
+    .caja_footer {
+        width: auto;
+        height: auto;
+    }
+
+    .style_IniciarJuego {
+        font-size: 5vw;
+        width: auto;
+        height: auto;
+        padding: auto;
+    }
+
+    canvas {
+        width: 100%;
+    }
+
+    .embed{
+        width:100%;
+    }
+
+      
+}

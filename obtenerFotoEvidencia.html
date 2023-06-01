@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Evidencia</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="caja_header">
+        <img class="img_desarrollador" src="imagenes/logo_agrictmex.png" alt="logo empresa">
+        <p>#valor jitomate
+            (tipo de cambio)</p>
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <div class="caja_main">
+            <p class="titulo">Foto EVIDENCIAS</p><br>
+            <div class="otro">
+                <button id="takeSnapshot" class="btn-material">Sacar foto</button>
+                <button id="download" class="btn-material">Guardar imagen</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <br>
+        <div styles="text-align: center"></div>
+        <video id="videoElement" autoplay="true"></video>
+        </div>
+        
+        <div>
+            <canvas id="canvasElement" height="720" width="1280"></canvas>
+        </div>
+        <script>
+            const video = document.getElementById("videoElement")
+            navigator.mediaDevices.getUserMedia({ Audio: false, video: true })
+                .then(
+                    (stream) => {
+                        video.srcObject = stream;
+                        console.log(stream)
+                    }
+                )
+                .catch((error) => {
+                    console.log(error);
+                })
+
+            document.getElementById("takeSnapshot").addEventListener("click", () => {
+                takePicture();
+            })
+
+            const canvas = document.getElementById("canvasElement")
+
+            function takePicture() {
+                //const canvas = document.getElementById("canvasElement")
+                let ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+
+            }
+        </script>
+    </section>    
+</main>
+<footer>
+
+</footer>       
+</body>
+</html>
